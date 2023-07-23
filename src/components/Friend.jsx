@@ -1,0 +1,1 @@
+// Friendlist component
