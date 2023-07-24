@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material";
 import { themeSettings } from "./theme";
+import Friend from "components/Friend";
 
 function App() {
   //get the value from state
@@ -20,6 +21,7 @@ function App() {
         <ThemeProvider theme={theme}>
           {/*Css baseline is a component from Material-UI that applies basic CSS normalization to your application */}
           <CssBaseline />
+
           <Routes>
             <Route path="/" element={<LoginPage />} />
             <Route path="/home" element={<Homepage />} />

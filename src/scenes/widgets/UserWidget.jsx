@@ -71,11 +71,11 @@ const UserWidget = ({ userId, picturePath }) => {
                 },
               }}
             >
-              {firstName} {lastName}
+              {firstName}
             </Typography>
             <Typography color={medium}>
               {" "}
-              {friends && friends.length} friends friends
+              {friends && friends.length} friends
             </Typography>
           </Box>
         </FlexBetween>
@@ -106,12 +106,12 @@ const UserWidget = ({ userId, picturePath }) => {
             {viewedProfile}
           </Typography>
         </FlexBetween>
-        <FlexBetween>
+        {/* <FlexBetween>
           <Typography color={medium}>Impressions of your post</Typography>
           <Typography color={main} fontWeight="500">
             {impressions}
           </Typography>
-        </FlexBetween>
+        </FlexBetween> */}
       </Box>
 
       <Divider />
