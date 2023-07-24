@@ -11,6 +11,7 @@ const AdvertWidget = () => {
   return (
     <>
       <Typography>Addvertisement</Typography>
+
       <img
         width="100%"
         height="auto"

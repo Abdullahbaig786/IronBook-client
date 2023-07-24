@@ -31,7 +31,7 @@ const LoginPage = () => {
           varient="h5"
           sx={{ marginBottom: "1.5rem" }}
         >
-          Welcome to Foodiopedia
+          Welcome to Foodopedia
         </Typography>
         <Form />
       </Box>
