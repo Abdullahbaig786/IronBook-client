@@ -21,7 +21,6 @@ const UserWidget = ({ userId, picturePath }) => {
   const dark = palette.neutral.dark;
   const medium = palette.neutral.medium;
   const main = palette.neutral.main;
-
   const getUser = async () => {
     const response = await fetch(`http://localhost:3001/users/${userId}`, {
       method: "GET",
@@ -41,7 +40,6 @@ const UserWidget = ({ userId, picturePath }) => {
 
   const {
     firstName,
-    lastName,
     location,
     occupation,
     viewedProfile,
@@ -125,6 +123,7 @@ const UserWidget = ({ userId, picturePath }) => {
         <FlexBetween gap="1rem" mb="0.5rem">
           <FlexBetween gap="1rem">
             <img src="../assets/twitter.png" alt="twitter" />
+
             <Box>
               <Typography color={main} fontWeight="500">
                 Twitter
@@ -132,12 +131,19 @@ const UserWidget = ({ userId, picturePath }) => {
               <Typography color={medium}>Social Network</Typography>
             </Box>
           </FlexBetween>
-          <EditOutlined sx={{ color: main }} />
         </FlexBetween>
 
         <FlexBetween gap="1rem">
           <FlexBetween gap="1rem">
-            <img src="../assets/linkedin.png" alt="linkedin" />
+            {/* <img src="../assets/linkedin.png" alt="linkedin" /> */}
+
+            <a href="https://www.linkedin.com/in/abdullah-baig-186856200/">
+              <img
+                src="/assets/linkedin.png"
+                draggable="false"
+                alt="linkedin"
+              />
+            </a>
             <Box>
               <Typography color={main} fontWeight="500">
                 Linkedin
@@ -145,7 +151,6 @@ const UserWidget = ({ userId, picturePath }) => {
               <Typography color={medium}>Network Platform</Typography>
             </Box>
           </FlexBetween>
-          <EditOutlined sx={{ color: main }} />
         </FlexBetween>
       </Box>
     </WidgetWrapper>
