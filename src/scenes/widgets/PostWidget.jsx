@@ -47,6 +47,31 @@ const PostWidget = ({
     dispatch(setPost({ post: updatedPost }));
   };
 
+  //for delete
+  const deletePost = async () => {
+    try {
+      const response = await fetch(
+        `http://localhost:3001/posts/${postId}/delete`,
+        {
+          method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response.ok) {
+        console.log("Post deleted successfully");
+      } else {
+        console.log("Error deleting post");
+      }
+    } catch (error) {
+      console.log("Error:", error);
+    }
+  };
+  ///
+
   return (
     <WidgetWrapper m="2rem 0">
       <Friend
@@ -87,10 +112,14 @@ const PostWidget = ({
             <Typography>{comments.length}</Typography>
           </FlexBetween>
         </FlexBetween>
-
-        <IconButton>
-          <ShareOutlined />
-        </IconButton>
+        {/* delete */}
+        <>
+          <IconButton onClick={deletePost} component="div">
+            <IconButton>
+              <ShareOutlined />
+            </IconButton>
+          </IconButton>
+        </>
       </FlexBetween>
       {isComments && (
         <Box mt="0.5rem">

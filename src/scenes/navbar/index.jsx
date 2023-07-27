@@ -61,7 +61,7 @@ const Navbar = () => {
             },
           }}
         >
-          Foodopedia
+          IRONBOOK
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween

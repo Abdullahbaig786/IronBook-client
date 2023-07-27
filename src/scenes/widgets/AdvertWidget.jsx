@@ -12,20 +12,26 @@ const AdvertWidget = () => {
     <>
       <Typography>Addvertisement</Typography>
 
-      <img
-        width="100%"
-        height="auto"
-        alt="advert"
-        src="http://localhost:3001/assets/info4.jpeg"
-        style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
-      />
+      <a
+        href="https://www.tesla.com/de_de"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          width="100%"
+          height="auto"
+          alt="advert"
+          src="https://ecomento.de/wp-content/uploads/2022/08/Tesla-Model-Y.jpg"
+          style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
+        />
+      </a>
       <FlexBetween>
-        <Typography color={main}>MikaCosmetics</Typography>
-        <Typography color={medium}>mikacosmetics.com</Typography>
+        <Typography color={main}>Tesla</Typography>
+        <Typography color={medium}>Tesla.com.de</Typography>
       </FlexBetween>
       <Typography color={medium} m="0.5rem 0">
-        Your pathway to stunning and immaculate beauty and made sure your skin
-        is exfoliating skin and shining like light.
+        Tesla cars are electric vehicles known for their innovative design,
+        impressive performance, and advanced autonomous features.
       </Typography>
     </>
   );
